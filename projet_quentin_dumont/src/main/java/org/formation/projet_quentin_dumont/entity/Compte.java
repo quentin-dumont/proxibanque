@@ -18,6 +18,5 @@ public class Compte {
     @JoinColumn(name="client_id", nullable=false)
     private Client client;
 
-    private String nom;
-    private String prenom;
+    private Long solde;
 }
