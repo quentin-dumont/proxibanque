@@ -54,7 +54,7 @@ public class ClientController {
     }
 
     @PostMapping("/virement/from{compte_id1}/to{compte_id2}/{montant}")
-    List<Compte> virement(@PathVariable Long compte_id1, @PathVariable Long compte_id2, @PathVariable Long montant) {
+    void virement(@PathVariable Long compte_id1, @PathVariable Long compte_id2, @PathVariable Long montant) {
         return compteService.virement(compte_id1, compte_id2, montant);
     }
 

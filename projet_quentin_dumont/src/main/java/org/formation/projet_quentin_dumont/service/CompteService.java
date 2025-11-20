@@ -12,6 +12,6 @@ public interface CompteService {
 
     Optional<Compte> getCompte(Long id);
 
-    Compte virement(Long id, Long id2, Long montant);
+    void virement(Long id, Long id2, Long montant);
 }
 

@@ -52,7 +52,7 @@ public class AllServicesImpl implements ClientService, CompteService {
     }
 
     @Override
-    public Compte virement(Long compte_id1, Long compte_id2, Long montant) {
+    public void virement(Long compte_id1, Long compte_id2, Long montant) {
 
         if (montant <= 0) {
             throw new IllegalArgumentException("Le montant du virement doit être positif.");
@@ -73,7 +73,5 @@ public class AllServicesImpl implements ClientService, CompteService {
 
         compteRepository.save(compteSource);
         compteRepository.save(compteDest);
-
-        return null;
     }
 }
